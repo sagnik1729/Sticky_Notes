@@ -1,0 +1,178 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4dfea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Note creation section */
+.note-box {
+    width: 40%;
+    padding: 20px;
+    background-color: #e4ebf5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-right: 1px solid #aaa;
+    position: relative;
+    justify-content: center;
+}
+
+/* Center the textarea in the note box */
+textarea {
+    width: 80%;
+    height: 150px;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #6b7280;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    resize: none;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover and focus effect for textarea */
+textarea:focus {
+    border: 2px solid #4f46e5;
+    box-shadow: 0 0 12px rgba(79, 70, 229, 0.5);
+    outline: none;
+}
+
+/* Position color picker to the right of the textarea */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #6b7280;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+/* Add Notes button styling */
+button {
+    width: 50%;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4f46e5, #6b46e5);
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #6b46e5, #4f46e5);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Notes display section */
+.notes-container {
+    width: 90%;
+    padding: 17px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: start;
+    min-width: 200px;
+    height: 100%
+}
+
+.notes-container h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Sticky note styling */
+.note {
+    width: 150px; /* Set a fixed width for all notes */
+    height: 150px; /* Set a fixed height for all notes */
+    padding: 10px; /* Add padding for better text readability */
+    background-color: #6bf0ae;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow: hidden; /* Prevent content overflow */
+    text-overflow: ellipsis; /* Optional: Add an ellipsis for overflowing text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure text wraps properly inside the note */
+.note p {
+    margin: 0;
+    word-break: break-word; /* Ensure long words break onto a new line */
+    overflow-y: auto; /* Add vertical scrolling for long text */
+}
+
+.note .delete-btn {
+    padding: 0px 0px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0px;
+
+    
+
+    box-shadow: 0;
+
+}
+
+.note .delete-btn:hover {
+    color: #e60000;
+}
